@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shatterlands Archive</title>
+    <link rel="stylesheet" href="site-lib/styles/global-variable-styles.css">
+    <link rel="stylesheet" href="site-lib/styles/main-styles.css">
+    <link rel="stylesheet" href="site-lib/styles/obsidian.css">
+</head>
+<body class="publish">
+    <div id="main-horizontal">
+        <div id="left-sidebar" class="sidebar">
+            <div class="sidebar-handle"></div>
+            <div class="leaf-content">
+                <div id="file-explorer-container">
+                    </div>
+            </div>
+        </div>
+
+        <div id="center-content">
+            <div class="obsidian-document">
+                <div class="header">
+                    <h1 class="page-title">Shatterlands Archive</h1>
+                </div>
+                <div class="markdown-preview-sizer">
+                    <p>Welcome to the Shatterlands. Use the navigation on the left to explore the ecology, cultures, and history of the world.</p>
+                    <div class="feature-header">
+                        <div class="feature-title">Quick Links</div>
+                    </div>
+                    <ul>
+                        <li><a href="world-map-image.html">World Map Image</a></li>
+                        <li><a href="factions-and-organisations/avian-empire.html">Avian Empire</a></li>
+                        <li><a href="history/the-shattering.html">The Shattering</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('site-lib/html/file-tree-content.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('file-explorer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
